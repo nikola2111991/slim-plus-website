@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="S-Lim Plus Vršac - Zanatska limarija sa 8+ godina iskustva. Oluci, krovovi, opšivke. AA+ bonitet. Pozovite 064/1955-447">
+    <meta name="keywords" content="limarija Vršac, limar Vršac, oluci Vršac, građevinska limarija, krovopokrivanje Vršac">
+    <meta name="author" content="S-Lim Plus">
+    <title>S-Lim Plus Vršac | Zanatska Limarija | 8+ Godina Iskustva</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --primary: #B91C1C;
+            --primary-dark: #7F1D1D;
+            --primary-light: #FEF2F2;
+            --secondary: #1F2937;
+            --text: #374151;
+            --text-light: #6B7280;
+            --white: #FFFFFF;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --accent: #FBBF24;
+        }
+
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--white);
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            color: var(--secondary);
+            line-height: 1.2;
+        }
+
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; margin-bottom: 1rem; }
+        h3 { font-size: 1.5rem; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.5rem; }
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .logo-text span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .phone-btn {
+            background: var(--primary);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .phone-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--secondary);
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                gap: 15px;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .header-cta .phone-btn {
+                display: none;
+            }
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(31,41,55,0.85) 0%, rgba(31,41,55,0.7) 100%),
+                        url('images/stock_krov_01.jpg') center/cover no-repeat;
+            position: relative;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: var(--white);
+            max-width: 700px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 2.8rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .trust-badges {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            background: rgba(255,255,255,0.15);
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .trust-badge i {
+            color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .trust-badges {
+                flex-direction: column;
+            }
+        }
+
+        /* ===== SERVICES ===== */
+        .services {
+            padding: 80px 0;
+            background: var(--gray-100);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 10px auto 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 35px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid var(--gray-200);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .service-icon i {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* ===== WHY US ===== */
+        .why-us {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .why-item {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .why-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 30px rgba(185, 28, 28, 0.3);
+        }
+
+        .why-icon i {
+            font-size: 2rem;
+            color: var(--white);
+        }
+
+        .why-item h3 {
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+
+        .why-item p {
+            color: var(--text-light);
+        }
+
+        /* ===== GALLERY ===== */
+        .gallery {
+            padding: 80px 0;
+            background: var(--gray-100);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+
+        .gallery-item .overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: var(--white);
+            font-weight: 600;
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--white) 100%);
+        }
+
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            display: none;
+            border: 1px solid var(--gray-200);
+        }
+
+        .testimonial-card.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .testimonial-card .stars {
+            color: #FFC107;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .testimonial-card .quote {
+            font-size: 3rem;
+            color: var(--primary);
+            opacity: 0.3;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text);
+        }
+
+        .testimonial-card .author {
+            font-weight: 600;
+            color: var(--secondary);
+            font-size: 1.1rem;
+        }
+
+        .testimonial-card .location {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--gray-200);
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+        }
+
+        .slider-dot.active {
+            background: var(--primary);
+            transform: scale(1.2);
+        }
+
+        /* ===== ABOUT ===== */
+        .about {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100px;
+            height: 100px;
+            background: var(--primary);
+            border-radius: 16px;
+            z-index: -1;
+        }
+
+        .about-text h2 {
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .about-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 35px;
+            padding-top: 35px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+            line-height: 1;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image::before {
+                display: none;
+            }
+            
+            .about-stats {
+                justify-content: space-around;
+            }
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary-dark) 100%);
+            text-align: center;
+            color: var(--white);
+        }
+
+        .cta-section h2 {
+            color: var(--white);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-phone {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .cta-phone:hover {
+            color: var(--white);
+        }
+
+        /* ===== CONTACT ===== */
+        .contact {
+            padding: 80px 0;
+            background: var(--gray-100);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .contact-form h3 {
+            margin-bottom: 25px;
+            color: var(--secondary);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--secondary);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid var(--gray-200);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 16px;
+            font-size: 1rem;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 30px;
+            color: var(--secondary);
+        }
+
+        .contact-items {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .contact-item-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-item-icon i {
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        .contact-item h4 {
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-item p {
+            color: var(--text-light);
+        }
+
+        .contact-item a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .map-container {
+            margin-top: 30px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--secondary);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 40px;
+        }
+
+        .footer-about .logo {
+            margin-bottom: 20px;
+        }
+
+        .footer-about .logo-text {
+            color: var(--white);
+        }
+
+        .footer-about p {
+            color: #9CA3AF;
+            line-height: 1.8;
+        }
+
+        .footer-section h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-section a {
+            color: #9CA3AF;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 12px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: all 0.3s;
+            margin-bottom: 0;
+        }
+
+        .footer-social a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #9CA3AF;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        /* ===== FLOATING BUTTONS ===== */
+        .viber-float {
+            position: fixed;
+            bottom: 100px;
+            right: 25px;
+            width: 55px;
+            height: 55px;
+            background: #7360F2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.6rem;
+            box-shadow: 0 5px 25px rgba(115, 96, 242, 0.4);
+            z-index: 999;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .viber-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 35px rgba(115, 96, 242, 0.5);
+        }
+
+        .call-float {
+            position: fixed;
+            bottom: 30px;
+            right: 25px;
+            width: 55px;
+            height: 55px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.4rem;
+            box-shadow: 0 5px 25px rgba(185, 28, 28, 0.4);
+            z-index: 999;
+            animation: pulse 2s infinite;
+            text-decoration: none;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(185, 28, 28, 0.5); }
+            70% { box-shadow: 0 0 0 20px rgba(185, 28, 28, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(185, 28, 28, 0); }
+        }
+
+        /* ===== LIGHTBOX ===== */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            cursor: pointer;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 2.5rem;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .lightbox-close:hover {
+            transform: rotate(90deg);
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== AA+ BADGE ===== */
+        .aa-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
+        }
+
+        .aa-badge i {
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <span class="logo-text">S-Lim <span>Plus</span></span>
+                </a>
+                
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#pocetna">Početna</a></li>
+                        <li><a href="#usluge">Usluge</a></li>
+                        <li><a href="#galerija">Galerija</a></li>
+                        <li><a href="#o-nama">O nama</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-cta">
+                    <a href="tel:+381641955447" class="phone-btn">
+                        <i class="fas fa-phone"></i> 064/1955-447
+                    </a>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="pocetna">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge"><i class="fas fa-shield-alt"></i> AA+ Bonitet - Proverena firma</span>
+                <h1>Zanatska limarija u Vršcu od 2016.</h1>
+                <p>Oluci, krovovi, opšivke - sve od jednog majstora. Slobodan Divljakov lično radi svaki posao. Bez posrednika, bez čekanja.</p>
+                
+                <div class="hero-buttons">
+                    <a href="tel:+381641955447" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Pozovite odmah
+                    </a>
+                    <a href="#kontakt" class="btn btn-secondary">
+                        Besplatna procena
+                    </a>
+                </div>
+                
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <i class="fas fa-check-circle"></i> 8+ godina iskustva
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-check-circle"></i> AA+ kreditni bonitet
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-check-circle"></i> Vlasnik lično radi
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="usluge">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Limarski radovi</h2>
+                <p>Kompletna građevinska limarija za porodične kuće i manje objekte u Vršcu i okolini</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Oluci i slivnici</h3>
+                    <p>Izrada i montaža kompletnog sistema odvodnje. Pocinkovani ili plastificirani lim u boji po izboru.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Pokrivanje krovova</h3>
+                    <p>Trapezni lim, falcovani lim, lim u obliku crepa. Za garaže, nadstrešnice i pomoćne objekte.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3>Vetar lajsne i okapnice</h3>
+                    <p>Zaštita krovne konstrukcije od vetra i vlage. Precizna izrada i montaža po meri.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Opšivke dimnjaka</h3>
+                    <p>Sprečavanje prodora vode oko dimnjaka. Trajno rešenje za čest problem krovova.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h3>Snegobrani</h3>
+                    <p>Sigurnost od odrona snega. Montaža na sve vrste krovnih pokrivača.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Popravke i sanacije</h3>
+                    <p>Hitne intervencije i redovno održavanje. Zamena dotrajalih elemenata.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="why-us">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Zašto S-Lim Plus?</h2>
+                <p>Ono što nas izdvaja od ostalih limara u Vršcu</p>
+            </div>
+            
+            <div class="why-grid">
+                <div class="why-item fade-in">
+                    <div class="why-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Vlasnik lično radi</h3>
+                    <p>Nema "šefa ekipe". Slobodan Divljakov lično dolazi, meri i radi. Vi znate s kim imate posla.</p>
+                </div>
+                
+                <div class="why-item fade-in">
+                    <div class="why-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>AA+ bonitet</h3>
+                    <p>Najviša ocena pouzdanosti. Retka mala firma ima ovaj status. Vaša garancija da nećemo "nestati".</p>
+                </div>
+                
+                <div class="why-item fade-in">
+                    <div class="why-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>8+ godina u Vršcu</h3>
+                    <p>Od 2016. radimo isključivo od preporuka. To govori o kvalitetu bolje od bilo koje reklame.</p>
+                </div>
+                
+                <div class="why-item fade-in">
+                    <div class="why-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Fer cena, bez iznenađenja</h3>
+                    <p>Cena koju kažem na proceni - to je konačna cena. Bez "dodatnih radova" i skrivenih troškova.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="galerija">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Galerija radova</h2>
+                <p>Pogledajte primere naših limarskih radova</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in">
+                    <img src="images/stock_krov_01.jpg" alt="Rad na krovu">
+                    <span class="overlay">Krovopokrivanje</span>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="images/stock_limarija_02.jpg" alt="Limarski radovi">
+                    <span class="overlay">Limarski radovi</span>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="images/stock_oluk_01.jpg" alt="Montaža oluka">
+                    <span class="overlay">Oluci</span>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="images/stock_krov_02.jpg" alt="Završni radovi">
+                    <span class="overlay">Završni radovi</span>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="images/stock_gradjevina_01.jpg" alt="Gradilište">
+                    <span class="overlay">Projekti</span>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="images/stock_metal_01.jpg" alt="Metalni radovi">
+                    <span class="overlay">Metalni radovi</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Reči naših klijenata</h2>
+                <p>Šta kažu domaćini koji su nam ukazali poverenje</p>
+            </div>
+            
+            <div class="testimonial-slider fade-in">
+                <div class="testimonial-card active">
+                    <div class="quote"><i class="fas fa-quote-left"></i></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Slobodan je majstor starog kova. Došao je kad je rekao, uradio posao kako treba, i cena je bila tačno onakva kakvu je rekao na početku. Za svaku preporuku!"</p>
+                    <div class="author">Miroslav P.</div>
+                    <div class="location">Vršac, zamena oluka</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote"><i class="fas fa-quote-left"></i></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Konačno neko ko razume da nam treba majstor za vikendicu, a ne firma za fabričku halu. Sve pohvale za urednost i preciznost. Krov više ne prokišnjava!"</p>
+                    <div class="author">Jelena i Dragan M.</div>
+                    <div class="location">Okolina Vršca, opšivka dimnjaka</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote"><i class="fas fa-quote-left"></i></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Preporučili su mi ga komšije i nisam pogrešio. Za 2 dana završio kompletnu limariju na novoj garaži. Čisto, uredno, bez frke. Tako treba!"</p>
+                    <div class="author">Nenad S.</div>
+                    <div class="location">Vršac, limarija na garaži</div>
+                </div>
+            </div>
+            
+            <div class="slider-dots">
+                <button class="slider-dot active"></button>
+                <button class="slider-dot"></button>
+                <button class="slider-dot"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="o-nama">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image fade-in">
+                    <img src="images/stock_worker_01.jpg" alt="S-Lim Plus tim">
+                </div>
+                
+                <div class="about-text fade-in">
+                    <h2>O S-Lim Plus</h2>
+                    <p>Iza S-Lim Plus stoji Slobodan Divljakov, vršački limar sa preko 8 godina iskustva u građevinskoj limariji. Firma je registrovana kao zanatska radnja, što znači - lični pečat na svakom poslu.</p>
+                    <p>Nikada nismo imali sajt, niti reklamirali. Sve ove godine radimo isključivo od preporuka zadovoljnih domaćina. To je dokaz kvaliteta koji nijedna reklama ne može da zameni.</p>
+                    <p>Specijalizovani smo za porodične kuće i manje objekte. Dok velike firme jure hale i zgrade, mi se fokusiramo na vas - na vaš dom, vašu garažu, vašu vikendicu.</p>
+                    
+                    <div class="aa-badge">
+                        <i class="fas fa-check-circle"></i> AA+ BONITET - Najviša ocena pouzdanosti
+                    </div>
+                    
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">8+</span>
+                            <span class="stat-label">godina iskustva</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">AA+</span>
+                            <span class="stat-label">kreditni bonitet</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">lična garancija</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Treba vam limar u Vršcu?</h2>
+            <p>Besplatna procena, fer cena, pošten posao. Jedan poziv - sve rešeno.</p>
+            <a href="tel:+381641955447" class="cta-phone">
+                <i class="fas fa-phone"></i> 064/1955-447
+            </a>
+            <br>
+            <a href="#kontakt" class="btn btn-primary">Pošaljite upit</a>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="kontakt">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Kontakt</h2>
+                <p>Javite se za besplatnu procenu ili bilo koje pitanje</p>
+            </div>
+            
+            <div class="contact-content">
+                <form class="contact-form fade-in">
+                    <h3>Pošaljite upit</h3>
+                    <div class="form-group">
+                        <label for="name">Vaše ime</label>
+                        <input type="text" id="name" name="name" placeholder="Ime i prezime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefon</label>
+                        <input type="tel" id="phone" name="phone" placeholder="064/123-4567" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Poruka</label>
+                        <textarea id="message" name="message" placeholder="Opišite šta vam treba..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Pošalji preko Viber-a
+                    </button>
+                </form>
+                
+                <div class="contact-info fade-in">
+                    <h3>Kontakt informacije</h3>
+                    
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Telefon</h4>
+                                <p><a href="tel:+381641955447">064/1955-447</a></p>
+                                <p style="font-size: 0.85rem;">Slobodan Divljakov - vlasnik</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:slobadivljakov@gmail.com">slobadivljakov@gmail.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Adresa</h4>
+                                <p>Jug Bogdana 34<br>26300 Vršac, Srbija</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Radno vreme</h4>
+                                <p>Pon - Sub: 07:00 - 18:00<br>Nedelja: Po dogovoru</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2827.9991455574847!2d21.29907!3d45.11778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDA3JzA0LjAiTiAyMcKwMTcnNTYuNyJF!5e0!3m2!1sen!2srs!4v1640000000000!5m2!1sen!2srs" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <span class="logo-text">S-Lim <span>Plus</span></span>
+                    </a>
+                    <p>Zanatska limarija u Vršcu od 2016. godine. Oluci, krovovi, opšivke - sve od jednog majstora. AA+ bonitet.</p>
+                    <div class="footer-social">
+                        <a href="viber://chat?number=%2B381641955447" title="Viber"><i class="fab fa-viber"></i></a>
+                        <a href="tel:+381641955447" title="Pozovite"><i class="fas fa-phone"></i></a>
+                        <a href="mailto:slobadivljakov@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Navigacija</h4>
+                    <a href="#pocetna">Početna</a>
+                    <a href="#usluge">Usluge</a>
+                    <a href="#galerija">Galerija</a>
+                    <a href="#o-nama">O nama</a>
+                    <a href="#kontakt">Kontakt</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Usluge</h4>
+                    <a href="#usluge">Oluci i slivnici</a>
+                    <a href="#usluge">Pokrivanje krovova</a>
+                    <a href="#usluge">Vetar lajsne</a>
+                    <a href="#usluge">Opšivke dimnjaka</a>
+                    <a href="#usluge">Popravke</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year">2025</span> S-Lim Plus Vršac. Sva prava zadržana. | AA+ Bonitet</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING BUTTONS -->
+    <a href="viber://chat?number=%2B381641955447" class="viber-float" title="Pišite na Viber">
+        <i class="fab fa-viber"></i>
+    </a>
+    
+    <a href="tel:+381641955447" class="call-float" title="Pozovite odmah">
+        <i class="fas fa-phone"></i>
+    </a>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // ===== MOBILE MENU =====
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+        }
+
+        // Close menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // ===== SMOOTH SCROLL =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ===== HEADER SCROLL EFFECT =====
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 100) {
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.15)';
+                header.style.padding = '10px 0';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+                header.style.padding = '15px 0';
+            }
+        });
+
+        // ===== TESTIMONIAL SLIDER =====
+        let currentSlide = 0;
+        const testimonials = document.querySelectorAll('.testimonial-card');
+        const dots = document.querySelectorAll('.slider-dot');
+
+        function showSlide(index) {
+            testimonials.forEach((t, i) => {
+                t.classList.remove('active');
+                if (dots[i]) dots[i].classList.remove('active');
+            });
+            
+            if (testimonials[index]) {
+                testimonials[index].classList.add('active');
+                if (dots[index]) dots[index].classList.add('active');
+            }
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % testimonials.length;
+            showSlide(currentSlide);
+        }
+
+        // Auto-advance every 5 seconds
+        if (testimonials.length > 0) {
+            showSlide(0);
+            setInterval(nextSlide, 5000);
+        }
+
+        // Click on dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+            });
+        });
+
+        // ===== FORM HANDLING - VIBER REDIRECT =====
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = this.querySelector('input[name="name"]').value;
+                const phone = this.querySelector('input[name="phone"]').value;
+                const message = this.querySelector('textarea[name="message"]').value;
+                
+                // Create Viber message
+                const viberMessage = encodeURIComponent(
+                    `Poruka sa sajta S-Lim Plus:\n\nIme: ${name}\nTelefon: ${phone}\nPoruka: ${message}`
+                );
+                
+                // Open Viber with pre-filled message
+                window.open(`viber://chat?number=%2B381641955447&text=${viberMessage}`, '_blank');
+                
+                // Reset form
+                this.reset();
+                
+                // Show success message
+                alert('Hvala! Poruka će biti poslata preko Viber aplikacije.');
+            });
+        }
+
+        // ===== GALLERY LIGHTBOX =====
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('img');
+                if (!img) return;
+                
+                const lightbox = document.createElement('div');
+                lightbox.className = 'lightbox';
+                lightbox.innerHTML = `
+                    <img src="${img.src}" alt="${img.alt}">
+                    <span class="lightbox-close">&times;</span>
+                `;
+                
+                document.body.appendChild(lightbox);
+                document.body.style.overflow = 'hidden';
+                
+                lightbox.addEventListener('click', (e) => {
+                    if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
+                        document.body.removeChild(lightbox);
+                        document.body.style.overflow = '';
+                    }
+                });
+                
+                // Close on Escape key
+                document.addEventListener('keydown', function closeOnEsc(e) {
+                    if (e.key === 'Escape') {
+                        if (document.querySelector('.lightbox')) {
+                            document.body.removeChild(lightbox);
+                            document.body.style.overflow = '';
+                        }
+                        document.removeEventListener('keydown', closeOnEsc);
+                    }
+                });
+            });
+        });
+
+        // ===== SCROLL ANIMATIONS =====
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(el => fadeObserver.observe(el));
+
+        // ===== CURRENT YEAR IN FOOTER =====
+        const yearSpan = document.querySelector('.current-year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+
+        // ===== PRELOAD HERO IMAGE =====
+        const heroSection = document.querySelector('.hero');
+        if (heroSection) {
+            const img = new Image();
+            img.src = 'images/stock_krov_01.jpg';
+        }
+    </script>
+</body>
+</html>
